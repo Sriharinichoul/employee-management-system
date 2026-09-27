@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PeopleDesk | Employee Portal</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px; background: #f3f5fa; color: #192238; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .card { width: min(920px, 100%); min-height: 560px; display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; background: #fff; border: 1px solid #e6e9f0; border-radius: 20px; box-shadow: 0 22px 60px #2636571a; }
+    .intro { display: flex; flex-direction: column; justify-content: space-between; padding: 40px; color: #fff; background: linear-gradient(145deg, #263fae, #6279ed); }
+    .brand { display: flex; align-items: center; gap: 11px; font-weight: 700; letter-spacing: .02em; }
+    .logo { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 11px; background: #ffffff30; font-size: 20px; }
+    .intro-copy { margin: auto 0; padding: 45px 0; }
+    .kicker { margin: 0 0 13px; color: #dbe2ff; font-size: 12px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+    h1 { margin: 0; font-size: clamp(34px, 4vw, 46px); line-height: 1.12; letter-spacing: -.04em; }
+    .intro-copy p:last-child { max-width: 330px; color: #e0e6ff; line-height: 1.65; font-size: 14px; }
+    .tagline { color: #dbe2ff; font-size: 12px; }
+    .login { display: grid; place-items: center; padding: 48px; }
+    .content { width: min(100%, 340px); }
+    h2 { margin: 0; font-size: 27px; letter-spacing: -.03em; }
+    .sub { margin: 9px 0 30px; color: #778094; font-size: 14px; }
+    .field { margin: 0 0 18px; }
+    label { display: block; margin-bottom: 8px; color: #344057; font-size: 13px; font-weight: 650; }
+    input[type="email"], input[type="password"], input[type="text"] { width: 100%; height: 47px; padding: 0 13px; border: 1px solid #dce1eb; border-radius: 8px; outline: none; color: #192238; font: inherit; font-size: 14px; }
+    input:focus { border-color: #526be0; box-shadow: 0 0 0 3px #526be01c; }
+    .password-wrap { position: relative; }
+    .password-wrap input { padding-right: 62px; }
+    .show { position: absolute; top: 50%; right: 12px; transform: translateY(-50%); border: 0; background: none; color: #4c64d5; font-weight: 650; cursor: pointer; }
+    .options { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin: 5px 0 23px; font-size: 12px; }
+    .remember { display: inline-flex; align-items: center; gap: 7px; margin: 0; color: #606a7c; font-weight: 400; cursor: pointer; }
+    .remember input { accent-color: #4c64d5; }
+    a { color: #4c64d5; font-weight: 600; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .submit { width: 100%; height: 48px; border: 0; border-radius: 8px; background: #4c64d5; color: white; font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; }
+    .submit:hover { background: #3f56c4; }
+    .message { min-height: 19px; margin: 12px 0 0; color: #b42318; font-size: 12px; line-height: 1.5; }
+    .help { margin: 25px 0 0; color: #858d9c; text-align: center; font-size: 12px; }
+    @media (max-width: 680px) { body { padding: 14px; } .card { grid-template-columns: 1fr; min-height: 0; } .intro { padding: 25px; } .intro-copy { padding: 28px 0 4px; } h1 { font-size: 32px; } .intro-copy p:last-child, .tagline { display: none; } .login { padding: 32px 24px; } }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <section class="intro" aria-label="Employee portal">
+      <div class="brand"><span class="logo" aria-hidden="true">✦</span> PeopleDesk</div>
+      <div class="intro-copy">
+        <p class="kicker">Employee management</p>
+        <h1>Your people.<br>One place.</h1>
+        <p>Sign in to access your team workspace and manage the things that keep work moving.</p>
+      </div>
+      <div class="tagline">A simpler way to work together.</div>
+    </section>
+    <section class="login" aria-labelledby="login-title">
+      <div class="content">
+        <h2 id="login-title">Welcome back</h2>
+        <p class="sub">Enter your account details to sign in.</p>
+        <form id="login-form" novalidate>
+          <div class="field">
+            <label for="email">Work email</label>
+            <input id="email" name="email" type="email" autocomplete="username" placeholder="you@company.com" required>
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <div class="password-wrap">
+              <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required>
+              <button class="show" type="button" aria-label="Show password" aria-controls="password">Show</button>
+            </div>
+          </div>
+          <div class="options">
+            <label class="remember"><input name="remember" type="checkbox"> Remember me</label>
+            <a href="mailto:it-support@example.com?subject=Password%20reset">Forgot password?</a>
+          </div>
+          <button class="submit" type="submit">Sign in</button>
+          <p class="message" id="message" role="status" aria-live="polite"></p>
+        </form>
+        <p class="help">Need help? Contact your company administrator.</p>
+      </div>
+    </section>
+  </main>
+  <script>
+    const form = document.getElementById('login-form');
+    const email = document.getElementById('email');
+    const password = document.getElementById('password');
+    const message = document.getElementById('message');
+    const showButton = document.querySelector('.show');
+
+    showButton.addEventListener('click', () => {
+      const reveal = password.type === 'password';
+      password.type = reveal ? 'text' : 'password';
+      showButton.textContent = reveal ? 'Hide' : 'Show';
+      showButton.setAttribute('aria-label', reveal ? 'Hide password' : 'Show password');
+    });
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      message.textContent = '';
+      if (!email.value.trim() || !email.validity.valid) {
+        message.textContent = 'Enter a valid work email address.';
+        email.focus();
+        return;
+      }
+      if (!password.value) {
+        message.textContent = 'Enter your password.';
+        password.focus();
+        return;
+      }
+      message.textContent = 'Sign-in service is not connected. Contact your administrator.';
+    });
+  </script>
+</body>
+</html>
