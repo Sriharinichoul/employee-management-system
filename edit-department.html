@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Edit Department | Employee Management System</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Employee Management System</h1>
+
+        <div>
+            <span>Admin</span>
+            <a href="admin-dashboard.html">Dashboard</a>
+            <a href="#">Profile</a>
+            <a href="index.html">Logout</a>
+        </div>
+    </header>
+
+    <!-- Main Layout -->
+    <main>
+
+        <!-- Sidebar -->
+        <aside>
+            <nav>
+                <a href="admin-dashboard.html">Dashboard</a>
+                <a href="employees.html">Employees</a>
+                <a href="departments.html">Departments</a>
+                <a href="#">Attendance</a>
+                <a href="#">Leave Management</a>
+                <a href="#">Reports</a>
+                <a href="#">Settings</a>
+            </nav>
+        </aside>
+
+        <!-- Page Content -->
+        <section>
+
+            <h2>Edit Department</h2>
+
+            <p>Update the department manager and status.</p>
+
+            <div class="department-edit-form show">
+
+                <form id="departmentForm">
+
+                    <!-- Department ID -->
+                    <div class="form-group">
+                        <label for="departmentId">
+                            Department ID
+                        </label>
+
+                        <input
+                            type="text"
+                            id="departmentId"
+                            readonly
+                        >
+                    </div>
+
+                    <!-- Department Name -->
+                    <div class="form-group">
+                        <label for="departmentName">
+                            Department Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="departmentName"
+                            readonly
+                        >
+                    </div>
+
+                    <!-- Department Manager -->
+                    <div class="form-group">
+                        <label for="manager">
+                            Department Manager
+                        </label>
+
+                        <input
+                            type="text"
+                            id="manager"
+                            required
+                            placeholder="Enter department manager"
+                        >
+                    </div>
+
+                    <!-- Status -->
+                    <div class="form-group">
+                        <label for="status">
+                            Status
+                        </label>
+
+                        <select id="status" class="department-status" required>
+                            <option value="Active">Active</option>
+                            <option value="Inactive">Inactive</option>
+                        </select>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="form-buttons">
+
+                        <button type="submit">
+                            Update Department
+                        </button>
+
+                        <button
+                            type="button"
+                            id="cancelDepartmentEdit"
+                            class="cancel-button"
+                        >
+                            Cancel
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        Employee Management System
+    </footer>
+
+    <script src="js/edit-department.js"></script>
+
+</body>
+</html>

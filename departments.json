@@ -1,0 +1,26 @@
+[
+    {
+        "departmentId": "D001",
+        "departmentName": "Information Technology",
+        "manager": "Rahul Sharma",
+        "status": "Active"
+    },
+    {
+        "departmentId": "D002",
+        "departmentName": "Finance",
+        "manager": "Priya Reddy",
+        "status": "Active"
+    },
+    {
+        "departmentId": "D003",
+        "departmentName": "Human Resources",
+        "manager": "Ananya Rao",
+        "status": "Active"
+    },
+    {
+        "departmentId": "D004",
+        "departmentName": "Marketing",
+        "manager": "Arjun Patel",
+        "status": "Active"
+    }
+]

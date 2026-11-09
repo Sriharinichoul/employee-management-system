@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Departments | Employee Management System
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- Header -->
+
+    <header>
+
+        <h1>
+            Employee Management System
+        </h1>
+
+        <div>
+
+            <span>
+                Admin
+            </span>
+
+            <a href="admin-dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="#">
+                Profile
+            </a>
+
+            <a href="index.html">
+                Logout
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- Main Layout -->
+
+    <main>
+
+
+        <!-- Sidebar -->
+
+        <aside>
+
+            <nav>
+
+                <a href="admin-dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="employees.html">
+                    Employees
+                </a>
+
+                <a href="departments.html">
+                    Departments
+                </a>
+
+                <a href="#">
+                    Attendance
+                </a>
+
+                <a href="#">
+                    Leave Management
+                </a>
+
+                <a href="#">
+                    Reports
+                </a>
+
+                <a href="#">
+                    Settings
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+
+        <!-- Page Content -->
+
+        <section>
+
+
+            <h2>
+                Department Management
+            </h2>
+
+            <p>
+                View, search and manage company departments.
+            </p>
+
+
+
+            <!-- Add Department -->
+
+            <div class="department-actions">
+
+                <a
+                    href="add-department.html"
+                    class="add-department"
+                >
+                    Add Department
+                </a>
+
+            </div>
+
+
+
+            <!-- Search -->
+
+            <div class="department-search">
+
+                <label for="searchDepartment">
+                    Search Department:
+                </label>
+
+                <input
+                    type="text"
+                    id="searchDepartment"
+                    placeholder="Search by department name"
+                >
+
+            </div>
+
+
+
+            <!-- Department Table -->
+
+            <div class="department-table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Department ID
+                            </th>
+
+                            <th>
+                                Department Name
+                            </th>
+
+                            <th>
+                                Manager
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Action
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="departmentTableBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+
+            <!-- Edit Department Form -->
+
+            <div
+                class="department-edit-form"
+                id="editDepartmentContainer"
+            >
+
+                <h2>
+                    Update Department
+                </h2>
+
+
+                <form id="departmentForm">
+
+
+                    <!-- Department ID -->
+
+                    <div class="form-group">
+
+                        <label for="departmentId">
+                            Department ID
+                        </label>
+
+                        <input
+                            type="text"
+                            id="departmentId"
+                            readonly
+                        >
+
+                    </div>
+
+
+
+                    <!-- Department Name -->
+
+                    <div class="form-group">
+
+                        <label for="departmentName">
+                            Department Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="departmentName"
+                            readonly
+                        >
+
+                    </div>
+
+
+
+                    <!-- Manager -->
+
+                    <div class="form-group">
+
+                        <label for="manager">
+                            Department Manager
+                        </label>
+
+                        <input
+                            type="text"
+                            id="manager"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- Status -->
+
+                    <div class="form-group">
+
+                        <label for="status">
+                            Status
+                        </label>
+
+                        <select
+                            id="status"
+                            required
+                        >
+
+                            <option value="Active">
+                                Active
+                            </option>
+
+                            <option value="Inactive">
+                                Inactive
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- Buttons -->
+
+                    <div class="form-buttons">
+
+                        <button type="submit">
+                            Update Department
+                        </button>
+
+                        <button
+                            type="button"
+                            id="cancelDepartmentEdit"
+                            class="cancel-button"
+                        >
+                            Cancel
+                        </button>
+
+                    </div>
+
+
+                </form>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        Employee Management System
+
+    </footer>
+
+
+
+    <script src="js/departments.js"></script>
+
+</body>
+
+</html>

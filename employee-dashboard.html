@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Employee Dashboard | Employee Management System</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Employee Management System</h1>
+
+        <div>
+            <span id="headerEmployeeName">Employee</span>
+
+            <a href="employee-profile.html">Profile</a>
+
+            <a href="#" id="employeeLogout">Logout</a>
+        </div>
+    </header>
+
+    <!-- Main Layout -->
+    <main>
+
+        <!-- Sidebar -->
+        <aside>
+            <nav>
+                <a href="employee-dashboard.html">Dashboard</a>
+
+                <a href="employee-profile.html">My Profile</a>
+
+                <a href="#employeeSearchSection">Search Employees</a>
+
+                <a href="#departmentSearchSection">Search Departments</a>
+
+                <a href="change-password.html">Change Password</a>
+            </nav>
+        </aside>
+
+        <!-- Dashboard Content -->
+        <section>
+
+            <h2 id="welcomeMessage">Employee Dashboard</h2>
+
+            <p>Welcome to your employee dashboard.</p>
+
+            <!-- My Employment Information -->
+            <div class="employee-dashboard-card">
+
+                <h2>My Employment Information</h2>
+
+                <div class="employee-info-grid">
+
+                    <div class="employee-info-item">
+                        <span>Employee ID</span>
+                        <strong id="employeeId">-</strong>
+                    </div>
+
+                    <div class="employee-info-item">
+                        <span>Company Email</span>
+                        <strong id="employeeEmail">-</strong>
+                    </div>
+
+                    <div class="employee-info-item">
+                        <span>Department</span>
+                        <strong id="employeeDepartment">-</strong>
+                    </div>
+
+                    <div class="employee-info-item">
+                        <span>Manager</span>
+                        <strong id="employeeManager">-</strong>
+                    </div>
+
+                    <div class="employee-info-item">
+                        <span>Designation</span>
+                        <strong id="employeeDesignation">-</strong>
+                    </div>
+
+                    <div class="employee-info-item">
+                        <span>Joining Date</span>
+                        <strong id="employeeJoiningDate">-</strong>
+                    </div>
+
+                    <div class="employee-info-item">
+                        <span>Status</span>
+                        <strong id="employeeStatus">-</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- My Documents -->
+            <div class="employee-dashboard-card">
+
+                <h2>My Documents</h2>
+
+                <p>View and download your uploaded documents.</p>
+
+                <div id="myDocumentsList"></div>
+
+            </div>
+
+            <!-- Search Employees -->
+            <div
+                class="employee-dashboard-card"
+                id="employeeSearchSection"
+            >
+
+                <h2>Search Employees</h2>
+
+                <p>
+                    Search for an employee to view their basic information.
+                </p>
+
+                <div class="employee-dashboard-search">
+                    <input
+                        type="text"
+                        id="employeeSearch"
+                        placeholder="Search by name, Employee ID or email"
+                        aria-label="Search employees by name, employee ID or email"
+                    >
+                </div>
+
+                <div id="employeeSearchResults"></div>
+
+                <div
+                    id="selectedEmployee"
+                    class="selected-employee"
+                ></div>
+
+            </div>
+
+            <!-- Search Departments -->
+            <div
+                class="employee-dashboard-card"
+                id="departmentSearchSection"
+            >
+
+                <h2>Search Departments</h2>
+
+                <p>
+                    Search for a department to view its basic information.
+                </p>
+
+                <div class="employee-dashboard-search">
+                    <input
+                        type="text"
+                        id="departmentSearch"
+                        placeholder="Search department"
+                        aria-label="Search departments"
+                    >
+                </div>
+
+                <div id="departmentSearchResults"></div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        Employee Management System
+    </footer>
+
+    <!-- Load document storage before dashboard JavaScript -->
+    <script src="js/document-storage.js"></script>
+    <script src="js/employee-dashboard.js"></script>
+
+</body>
+
+</html>

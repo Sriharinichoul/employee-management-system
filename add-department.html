@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Add Department - Employee Management System</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- Header -->
+
+    <header>
+
+        <h1>Employee Management System</h1>
+
+
+        <div>
+
+            <span>Admin</span>
+
+            <a href="admin-dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="departments.html">
+                Departments
+            </a>
+
+            <a href="index.html">
+                Logout
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- Main Content -->
+
+    <main>
+
+
+        <!-- Sidebar -->
+
+        <aside>
+
+            <nav>
+
+                <a href="admin-dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="employees.html">
+                    Employees
+                </a>
+
+                <a href="departments.html">
+                    Departments
+                </a>
+
+                <a href="#">
+                    Attendance
+                </a>
+
+                <a href="#">
+                    Leave Management
+                </a>
+
+                <a href="#">
+                    Reports
+                </a>
+
+                <a href="#">
+                    Settings
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+
+        <!-- Add Department Section -->
+
+        <section>
+
+            <h2>Add Department</h2>
+
+            <p>
+                Enter the department details below.
+            </p>
+
+
+            <!-- Department Form -->
+
+            <div class="department-form">
+
+                <form id="departmentForm">
+
+
+                    <!-- Department ID -->
+
+                    <div class="form-group">
+
+                        <label for="departmentId">
+                            Department ID
+                        </label>
+
+                        <input
+                            type="text"
+                            id="departmentId"
+                            placeholder="Example: D005"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- Department Name -->
+
+                    <div class="form-group">
+
+                        <label for="departmentName">
+                            Department Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="departmentName"
+                            placeholder="Example: Research & Development"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- Manager -->
+
+                    <div class="form-group">
+
+                        <label for="manager">
+                            Department Manager
+                        </label>
+
+                        <input
+                            type="text"
+                            id="manager"
+                            placeholder="Enter manager name"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- Status -->
+
+                    <div class="form-group">
+
+                        <label for="status">
+                            Status
+                        </label>
+
+                        <select id="status">
+
+                            <option value="Active">
+                                Active
+                            </option>
+
+                            <option value="Inactive">
+                                Inactive
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- Buttons -->
+
+                    <div class="form-buttons">
+
+                        <button type="submit">
+                            Add Department
+                        </button>
+
+
+                        <a href="departments.html">
+                            Cancel
+                        </a>
+
+                    </div>
+
+
+                </form>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 Employee Management System
+        </p>
+
+    </footer>
+
+
+
+    <!-- JavaScript -->
+
+    <script src="js/add-department.js"></script>
+
+
+</body>
+
+</html>

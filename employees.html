@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employees - Employee Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Employee Management System</h1>
+        <div>
+            <span>Admin</span>
+            <a href="admin-dashboard.html">Dashboard</a>
+            <a href="index.html">Logout</a>
+        </div>
+    </header>
+
+    <main>
+        <aside>
+            <nav>
+                <a href="admin-dashboard.html">Dashboard</a>
+                <a href="employees.html" class="active">Employees</a>
+                <a href="departments.html">Departments</a>
+                <a href="#">Attendance</a>
+                <a href="#">Leave Management</a>
+                <a href="#">Reports</a>
+                <a href="#">Settings</a>
+            </nav>
+        </aside>
+
+        <section>
+            <h2>Employee Management</h2>
+            <p>Manage all employees in the organization.</p>
+
+            <div class="employee-page-actions">
+                <a href="add-employee.html" class="add-employee">
+                    Add Employee
+                </a>
+                <a href="edit-employee.html" class="edit-employee">
+                    Edit Employee
+                </a>
+            </div>
+
+            <!-- Search and Filters -->
+            <div class="employee-filters">
+
+                <div class="employee-page-search">
+                    <label for="employeeSearch">Search Employee</label>
+                    <input
+                        type="search"
+                        id="employeeSearch"
+                        placeholder="Search by name, email or employee ID"
+                    >
+                </div>
+
+                <div class="employee-filter">
+                    <label for="departmentFilter">Department</label>
+                    <select id="departmentFilter">
+                        <option value="">All Departments</option>
+                    </select>
+                </div>
+
+                <div class="employee-filter">
+                    <label for="statusFilter">Status</label>
+                    <select id="statusFilter">
+                        <option value="">All Statuses</option>
+                        <option value="Active">Active</option>
+                        <option value="Inactive">Inactive</option>
+                    </select>
+                </div>
+
+                <div class="employee-filter">
+                    <label for="sortFilter">Sort By</label>
+                    <select id="sortFilter">
+                        <option value="">Default Order</option>
+                        <option value="name-asc">Name: A to Z</option>
+                        <option value="name-desc">Name: Z to A</option>
+                        <option value="id-asc">Employee ID: Ascending</option>
+                        <option value="id-desc">Employee ID: Descending</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <!-- Employee Table -->
+            <div class="employee-table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Employee ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Department</th>
+                            <th>Designation</th>
+                            <th>Joining Date</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="employeeTableBody">
+                        <tr>
+                            <td colspan="8">Loading employees...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Employee Management System</p>
+    </footer>
+
+    <script src="js/employees.js"></script>
+</body>
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Admin Profile | Employee Management System
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <h1>
+        Employee Management System
+    </h1>
+
+    <div>
+
+        <span id="headerAdminName">
+            Admin
+        </span>
+
+        <a href="admin-profile.html">
+            Profile
+        </a>
+
+        <a href="admin-change-password.html">
+            Change Password
+        </a>
+
+        <a href="index.html" id="adminLogout">
+            Logout
+        </a>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+    <aside>
+
+        <nav>
+
+            <a href="admin-dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="employees.html">
+                Employees
+            </a>
+
+            <a href="departments.html">
+                Departments
+            </a>
+
+            <a href="#">
+                Attendance
+            </a>
+
+            <a href="#">
+                Leave Management
+            </a>
+
+            <a href="#">
+                Reports
+            </a>
+
+            <a href="admin-profile.html">
+                My Profile
+            </a>
+
+            <a href="admin-change-password.html">
+                Change Password
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <section>
+
+        <h2>
+            My Profile
+        </h2>
+
+        <p>
+            View and update your administrator profile.
+        </p>
+
+
+        <form
+            id="adminProfileForm"
+            class="employee-form"
+        >
+
+
+            <h3 class="profile-form-heading">
+                Account Information
+            </h3>
+
+
+            <div class="form-group">
+
+                <label for="employeeId">
+                    Employee ID
+                </label>
+
+                <input
+                    type="text"
+                    id="employeeId"
+                    readonly
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="email">
+                    Company Email
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    readonly
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="role">
+                    Role
+                </label>
+
+                <input
+                    type="text"
+                    id="role"
+                    readonly
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="department">
+                    Department
+                </label>
+
+                <input
+                    type="text"
+                    id="department"
+                    readonly
+                >
+
+            </div>
+
+
+            <h3 class="profile-form-heading">
+                Personal Information
+            </h3>
+
+
+            <div class="form-group">
+
+                <label for="firstName">
+                    First Name
+                </label>
+
+                <input
+                    type="text"
+                    id="firstName"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="lastName">
+                    Last Name
+                </label>
+
+                <input
+                    type="text"
+                    id="lastName"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="dateOfBirth">
+                    Date of Birth
+                </label>
+
+                <input
+                    type="date"
+                    id="dateOfBirth"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="phone">
+                    Mobile Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Enter mobile number"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="bloodGroup">
+                    Blood Group
+                </label>
+
+                <select id="bloodGroup">
+
+                    <option value="">
+                        Select Blood Group
+                    </option>
+
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+
+                </select>
+
+            </div>
+
+
+            <h3 class="profile-form-heading">
+                Address Information
+            </h3>
+
+
+            <div class="form-group">
+
+                <label for="address">
+                    Address
+                </label>
+
+                <textarea
+                    id="address"
+                    rows="4"
+                    placeholder="Enter your address"
+                ></textarea>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="city">
+                    City
+                </label>
+
+                <input
+                    type="text"
+                    id="city"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="state">
+                    State
+                </label>
+
+                <input
+                    type="text"
+                    id="state"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="postalCode">
+                    Postal Code
+                </label>
+
+                <input
+                    type="text"
+                    id="postalCode"
+                >
+
+            </div>
+
+
+            <h3 class="profile-form-heading">
+                Emergency Contact
+            </h3>
+
+
+            <div class="form-group">
+
+                <label for="emergencyContactName">
+                    Emergency Contact Name
+                </label>
+
+                <input
+                    type="text"
+                    id="emergencyContactName"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="emergencyContactNumber">
+                    Emergency Contact Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="emergencyContactNumber"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="emergencyContactRelationship">
+                    Relationship
+                </label>
+
+                <input
+                    type="text"
+                    id="emergencyContactRelationship"
+                >
+
+            </div>
+
+
+            <div class="form-buttons">
+
+                <button type="submit">
+                    Save Changes
+                </button>
+
+                <a
+                    href="admin-dashboard.html"
+                    class="cancel-button"
+                >
+                    Cancel
+                </a>
+
+            </div>
+
+
+        </form>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    Employee Management System
+
+</footer>
+
+
+<script src="js/admin-profile.js"></script>
+
+</body>
+
+</html>

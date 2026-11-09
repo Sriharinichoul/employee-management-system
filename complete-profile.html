@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Complete Profile | Employee Management System</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <h1>Employee Management System</h1>
+
+        <div>
+            <span>New Employee</span>
+
+            <a href="#" id="profileLogout">
+                Logout
+            </a>
+        </div>
+
+    </header>
+
+    <!-- Main Layout -->
+    <main>
+
+        <section>
+
+            <h2>Complete Your Profile</h2>
+
+            <p>
+                Please provide your personal information before accessing your dashboard.
+            </p>
+
+            <div class="employee-form">
+
+                <form id="completeProfileForm">
+
+                    <!-- Personal Information -->
+                    <h3 class="profile-form-heading">
+                        Personal Information
+                    </h3>
+
+                    <div class="form-group">
+
+                        <label for="firstName" class="required-field">
+                            First Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="firstName"
+                            placeholder="Enter first name"
+                            pattern="[A-Za-z ]+"
+                            title="Only letters and spaces are allowed."
+                            required
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="lastName" class="required-field">
+                            Last Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="lastName"
+                            placeholder="Enter last name"
+                            pattern="[A-Za-z ]+"
+                            title="Only letters and spaces are allowed."
+                            required
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="dateOfBirth" class="required-field">
+                            Date of Birth
+                        </label>
+
+                        <input
+                            type="date"
+                            id="dateOfBirth"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="mobileNumber" class="required-field">
+                            Mobile Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="mobileNumber"
+                            placeholder="Enter 10-digit mobile number"
+                            inputmode="numeric"
+                            maxlength="10"
+                            minlength="10"
+                            pattern="[0-9]{10}"
+                            title="Enter exactly 10 digits."
+                            required
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="bloodGroup" class="required-field">
+                            Blood Group
+                        </label>
+
+                        <select id="bloodGroup" required>
+
+                            <option value="">
+                                Select Blood Group
+                            </option>
+
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- Address -->
+                    <h3 class="profile-form-heading">
+                        Address
+                    </h3>
+
+                    <div class="form-group">
+
+                        <label for="address" class="required-field">
+                            Address
+                        </label>
+
+                        <textarea
+                            id="address"
+                            rows="3"
+                            placeholder="Enter your full address"
+                            required
+                        ></textarea>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="city" class="required-field">
+                            City
+                        </label>
+
+                        <input
+                            type="text"
+                            id="city"
+                            placeholder="Enter city"
+                            pattern="[A-Za-z ]+"
+                            title="Only letters and spaces are allowed."
+                            required
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="state" class="required-field">
+                            State
+                        </label>
+
+                        <input
+                            type="text"
+                            id="state"
+                            placeholder="Enter state"
+                            pattern="[A-Za-z ]+"
+                            title="Only letters and spaces are allowed."
+                            required
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="postalCode" class="required-field">
+                            Postal Code
+                        </label>
+
+                        <input
+                            type="text"
+                            id="postalCode"
+                            placeholder="Enter 6-digit postal code"
+                            inputmode="numeric"
+                            maxlength="6"
+                            minlength="6"
+                            pattern="[0-9]{6}"
+                            title="Enter exactly 6 digits."
+                            required
+                        >
+
+                    </div>
+
+                    <!-- Emergency Contact -->
+                    <h3 class="profile-form-heading">
+                        Emergency Contact
+                    </h3>
+
+                    <div class="form-group">
+
+                        <label for="emergencyContactName" class="required-field">
+                            Emergency Contact Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="emergencyContactName"
+                            placeholder="Enter contact name"
+                            pattern="[A-Za-z ]+"
+                            title="Only letters and spaces are allowed."
+                            required
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="emergencyContactNumber" class="required-field">
+                            Emergency Contact Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="emergencyContactNumber"
+                            placeholder="Enter 10-digit contact number"
+                            inputmode="numeric"
+                            maxlength="10"
+                            minlength="10"
+                            pattern="[0-9]{10}"
+                            title="Enter exactly 10 digits."
+                            required
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="emergencyContactRelationship" class="required-field">
+                            Relationship
+                        </label>
+
+                        <input
+                            type="text"
+                            id="emergencyContactRelationship"
+                            placeholder="Example: Father"
+                            pattern="[A-Za-z ]+"
+                            title="Only letters and spaces are allowed."
+                            required
+                        >
+
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="form-buttons">
+
+                        <button type="submit">
+                            Save Profile
+                        </button>
+
+                        <a href="employee-login.html">
+                            Cancel
+                        </a>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        Employee Management System
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/complete-profile.js"></script>
+
+</body>
+
+</html>
